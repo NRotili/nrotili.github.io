@@ -1,12 +1,28 @@
 
-body{
+html,body{
     width: 100%;
     background-image: url('../img/backgroundSlide.jpg'); 
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container{
-    width: 100% !important; 
+    padding-top:30px;
+    min-height:100%;
+    text-align:center;
+}
+
+.headline{
+    text-align:center;
+   
+}
+  
+.headline  h1{
+      font-size:35px;
+      font-family: 'Montserrat', sans-serif;
+      color:#fff;
 }
 
 .no-padding {
@@ -19,4 +35,8 @@ body{
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.slider {
+    width: 100% !important;
 }

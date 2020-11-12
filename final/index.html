@@ -7,10 +7,15 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">  
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
     
 </head>
 <body>
@@ -21,17 +26,20 @@
             <div class="row justify-content-center">
                 <div class="col-xl-9 align-items-center">
                     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-                        <a href="/" class="navbar-brand">Practicas Profesionalizantes</a>
+                        <a href="#" class="navbar-brand">PPS - ISSP Nº 9112</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar7">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="navbar-collapse collapse justify-content-stretch" id="navbar7">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/">Home</a>
+                                    <a class="nav-link" href="#top">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Contacto</a>
+                                    <a class="nav-link" href="#contacto">Contacto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="modal" data-target="#loginModal">Login</a>
                                 </li>
                             </ul>
                         </div>
@@ -41,10 +49,10 @@
         </div>
     </header>
 
-    <div class="container-fluid">
+    <div id="top" class="container-fluid">
         <div class="row justify-content-center">
         
-            <div class="col-sm-10">
+            <div class="no-padding col-sm-12 col-md-12 col-lg-12">
                 
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -93,11 +101,11 @@
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
+                    <span class="sr-only">Anterior</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
+                    <span class="sr-only">Próxima</span>
                     </a>
                 </div>
             </div>
@@ -110,12 +118,169 @@
     </section>
 
 
-    <footer class="py-5 bg-dark">
+    <section id="prueba">
+ 
+    </section>
+
+    <section id="contacto">
 
         <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="mx-auto col-sm-6 py-3">
+                            <!-- form user info -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="mb-0">Formulario</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form class="form" role="form" autocomplete="off">
+                                        <div class="form-group row">
+                                            <div class="col-lg-6">
+                                                <input class="form-control" type="text" value="" placeholder="Nombre" required>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <input class="form-control" type="text" value="" placeholder="Apellido" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-lg-12">
+                                                <input class="form-control" type="email" value="" placeholder="email@email.com" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-lg-8">
+                                                <select id="user_time_zone" class="form-control" size="0">
+                                                    <option value="robotica">Técnico Superior en Robótica</option>
+                                                    <option value="sistemas" selected="selected">Técnico Superior en Análisis Funcional de Sistemas</option>
+                                                    <option value="comercio">Técnico Superior en Comercialización</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <input class="form-control" type="number" value="" placeholder="Año de cursado" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-lg-12">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Consulta" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label form-control-label"></label>
+                                            <div class="col-lg-4">
+                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#formModal">Enviar</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- /form user info -->
+                </div>
+
+                <div class="col-sm-6 py-3">
+                    <div class="card">
+                    <div class="card-header">
+                        <h5>Contactá con tu docente!</h5>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Cuándo utilizarlo?</h5>
+                        <p class="card-text text-justify">En muchas ocasiones, al estar desarrollando una aplicación, un sitio web,
+                            perderte en un instructivo, no encontrar el error, o el solo hecho de leer un documento 
+                            y no poder comprender a que se refiere, son excelentes oportunidades para utilizar esta valiosa herramienta.
+                        </p>
+                        <h5 class="card-title text-center">Solo puedo usar el formulario?</h5>
+                        <p class="card-text text-justify">Claro que no! También podes canalizar tus dudas en nuestras redes!
+                            
+                        </p>      
+
+                        <a href="http://www.facebook.com" target="blank" class="social-margin"> 
+                            <div class="social-icon facebook">
+                                <i class="fa fa-facebook" aria-hidden="true"></i> 
+                            </div>
+                        </a>
+                        <a href="http://www.twitter.com" target="blank" class="social-margin"> 
+                            <div class="social-icon twitter">
+                                <i class="fa fa-twitter" aria-hidden="true"></i> 
+                            </div>
+                        </a>
+                        <a href="http://www.twitter.com" target="blank" class="social-margin"> 
+                            <div class="social-icon whatsapp">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i> 
+                            </div>
+                        </a>
+
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="py-5 bg-dark">
+        <div class="container" style="padding-top: 0px;">
            <p class="m-0 text-center text-white">Copyright &copy; Prácticas Profesionalizantes - 2020</p>
         </div>
     </footer>
+
+
+    <!-- MODAL -->
+
+    <div class="modal" tabindex="-1" role="dialog" id="formModal"> 
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">ERROR!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Lamentablemente no pudimos enviar tu consulta, por favor utiliza otros medios de comunicación 
+                  o intenta nuevamente más tarde.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="loginModal"> 
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Iniciar sesión</h5>
+                    <form class="form-signin">
+                    <div class="form-label-group">
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                        <label for="inputEmail">Email</label>
+                    </div>
+        
+                    <div class="form-label-group">
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <label for="inputPassword">Contraseña</label>
+                    </div>
+        
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Recordar contraseña</label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Ingresar</button>
+                    <hr class="my-4">
+                    <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fa fa-google mr-2"></i> Ingresar con Google</button>
+                    <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fa fa-facebook-f mr-2"></i> Ingresar con Facebook</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
 
   
 </body>
